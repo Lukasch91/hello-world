@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-< lang="en">
 <head>
     <meta charset="UTF-8">
     <title>My example title</title>
 </head>
+<style>
+    p {
+        text-align: left;
+    }
+    body {
+        background-color: #ffd28e;
+    }
+</style>
 <br>
-      <input type="text" id="inputNumber" value="enter number">
+      <input type="text" id="inputNumber" value="enter number" title="Enter number">
       <input type="submit" value="GO!">
       <hr width="100%" size="1px" color="#00000">
-  <input type="text" id="PrimeNumber"  disabled>
-<br>
-  <input type="text" id="FactorialNumber"  disabled >
-  </form>
-</body>
-</html>
+<p class="justify">Prime number:
+  <input type="text" id="PrimeNumber" disabled title="Prime Number"></p>
+<p class="justify">Factorial number:
+  <input type="text" id="FactorialNumber"  disabled title="Factorial number"></p>
