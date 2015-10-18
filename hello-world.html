@@ -12,7 +12,7 @@
 <body>
 <br>
 <input type="text" id="inputNumber" placeholder="Enter number" title="Enter number">
-<input type="submit" value="GO!">
+<button onclick="buttonClickEvent()">GO!</button>
 <hr>
 <table>
     <tr>
@@ -23,7 +23,37 @@
         <td>Factorial number:</td>
         <td><input type="text" id="FactorialNumber" disabled title="Factorial number"></td>
     </tr>
+    <script>
+        var buttonClickEvent = function () {
+            console.log("Ivyko funkcija");
+            var inputValue = readInputField();
+            var primeNumberResult = primeNumber(inputValue);
+
+            setResultForElement("PrimeNumber", primeNumberResult);
+            console.log(primeNumberResult);
+        };
+
+        var readInputField = function () {
+            var value = document.getElementById("inputNumber").value;
+            console.log("My value: " + value);
+            return value;
+        };
+
+        var setResultForElement = function (id, result) {
+            document.getElementById(id).value = result;
+        };
+
+        var primeNumber = function (inputValue) {
+            for (var i = 2; i < inputValue; i++) {
+                var result = inputValue % i;
+                if (result === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    </script>
 </table>
 </body>
 </html>
-
