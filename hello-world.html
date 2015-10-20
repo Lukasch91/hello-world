@@ -24,26 +24,41 @@
         <td><input type="text" id="FactorialNumber" disabled title="Factorial number"></td>
     </tr>
     <script>
+
         var buttonClickEvent = function () {
             console.log("Ivyko funkcija");
             var inputValue = readInputField();
-            var primeNumberResult = primeNumber(inputValue);
+            var primeNumberResult = isPrimeNumber(inputValue);
+            var factorialNumberResult = calculateFactorial(inputValue);
 
-            setResultForElement("PrimeNumber", primeNumberResult);
+            setResultForElementById("PrimeNumber", primeNumberResult);
+            setResultForElementById("FactorialNumber", factorialNumberResult);
             console.log(primeNumberResult);
         };
-
         var readInputField = function () {
             var value = document.getElementById("inputNumber").value;
             console.log("My value: " + value);
             return value;
         };
 
-        var setResultForElement = function (id, result) {
+        var setResultForElementById = function (id, result) {
             document.getElementById(id).value = result;
         };
 
-        var primeNumber = function (inputValue) {
+        var calculateFactorial = function (inputValue) {
+            var result = inputValue ;
+            if (inputValue==0) {
+                return 1;
+            }
+            for (inputValue; inputValue > 1; inputValue--) {
+                result= result * (inputValue - 1);
+                
+            }
+            return result;
+        };
+
+
+        var isPrimeNumber = function (inputValue) {
             for (var i = 2; i < inputValue; i++) {
                 var result = inputValue % i;
                 if (result === 0) {
@@ -52,7 +67,6 @@
             }
             return true;
         }
-
     </script>
 </table>
 </body>
