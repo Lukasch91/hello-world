@@ -3,7 +3,7 @@ var buttonClickEvent = function () {
     var inputValue = readInputField();
     var primeNumberResult = isPrimeNumber(inputValue);
     var factorialNumberResult = calculateFactorial(inputValue);
-    var fizzBuzzRezult = fizzBuzz(inputValue);
+    var fizzBuzzResult = fizzBuzz(inputValue);
 
     setResultForElementById("PrimeNumber", primeNumberResult);
     setResultForElementById("FactorialNumber", factorialNumberResult);
@@ -32,17 +32,6 @@ var calculateFactorial = function (inputValue) {
     return result;
 };
 
-var fizzBuzz = function (inputValue) {
-    if (inputValue / 3) {
-        result = "Fizz";
-    } else if (inputValue / 5) {
-        result = "Buzz";
-    } else if (inputValue / 15) {
-        result = "FizzBuzz";
-    }
-    result = "NoFizzBuzz";
-};
-
 var isPrimeNumber = function (inputValue) {
     for (var i = 2; i < inputValue; i++) {
         var result = inputValue % i;
@@ -51,4 +40,18 @@ var isPrimeNumber = function (inputValue) {
         }
     }
     return true;
-}
+};
+
+var fizzBuzz = function (inputValue) {
+    for (var result = inputValue; result <= 999999; result++) {
+        if (result % 15 == 0)
+            return "FizzBuzz";
+        else if (result % 3 == 0)
+            return "Fizz";
+        else if (result % 5 == 0)
+            return "Buzz";
+        else
+            return "noFizzNoBuzz";
+    }
+};
+
