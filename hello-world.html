@@ -4,30 +4,59 @@
     <meta charset="UTF-8">
     <title>Hello world</title>
     <style>
-        body {
-            background-color: #fec275;
+        #header {
+            background-color: #2E88EE;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #names {
+            height: 300px;
+            width: 125px;
+            float: left;
+            padding: 4px;
+            text-align: right;
+        }
+
+        #ipfields {
+            float: left;
+        }
+
+        #footer {
+            background-color: #2E88EE;
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
+<div id="header">
+    Hello World
+</div>
 <br>
 <input type="text" id="inputNumber" placeholder="Enter number" title="Enter number">
 <button onclick="buttonClickEvent()">GO!</button>
 <hr>
-<table>
-    <tr>
-        <td>Prime number:</td>
-        <td><input type="text" id="PrimeNumber" disabled title="Prime Number"></td>
-    </tr>
-    <tr>
-        <td>Factorial number:</td>
-        <td><input type="text" id="FactorialNumber" disabled title="Factorial number"></td>
-    </tr>
-    <tr>
-        <td>FizzBuzz:</td>
-        <td><input type="text" id="fizzBuzz" disabled title="FizzBuzz"></td>
-    </tr>
-    <script src="hello_world.js"></script>
-</table>
+<div id="names">
+    <p>Prime number:</p>
+
+    <p>Factorial number:</p>
+
+    <p>Fizz Buzz:</p>
+</div>
+<div id="ipfields">
+    <p><input type="text" id="PrimeNumber" disabled title="Prime Number"></p>
+
+    <p><input type="text" id="FactorialNumber" disabled title="Factorial number"></p>
+
+    <p><input type="text" id="fizzBuzz" disabled title="FizzBuzz"></p>
+</div>
+<div id="footer"</div>
+<p>Copyright</p>
+
+<script src="hello_world.js"></script>
 </body>
 </html>
