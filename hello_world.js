@@ -57,9 +57,38 @@ var fizzBuzz = function (inputValue) {
     }
 };
 
+/*var hasElementInArray = function (inputValueArray, x) {
+ var a = inputValueArray[x];
+ for (var y = 0; y < x; y++) {
+ var b = inputValueArray[y];
+ if (a == b) {
+ return true;
+ }
+ }
+ return false;
+ };*/
+
+var hasElementInArray = function (array, element) {
+    for (var x = 0; x <= array.length; x++) {
+        if (element == array[x]) {
+            return true;
+        }
+    }
+    return false;
+};
+
+
 var array = function (inputValue) {
-    var a = inputValue.split("");
-    return a;
+    var inputValueArray = inputValue.split("");
+    var arrayWithoutDublicates = [inputValueArray[0]];
+
+    for (var x = 0; x <= inputValueArray.length; x++) {
+        var slicedArray = inputValueArray.slice(0, x + 1);
+        if (!hasElementInArray(slicedArray, inputValueArray[x + 1])) {
+            arrayWithoutDublicates.push(inputValueArray[x + 1]);
+        }
+    }
+    return arrayWithoutDublicates;
 };
 
 
