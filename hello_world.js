@@ -5,11 +5,13 @@ var buttonClickEvent = function () {
     var factorialNumberResult = calculateFactorial(inputValue);
     var fizzBuzzResult = fizzBuzz(inputValue);
     var arrayResult = array(inputValue);
+    var bubbleSortResult = bubbleSort(inputValue);
 
     setResultForElementById("PrimeNumber", primeNumberResult);
     setResultForElementById("FactorialNumber", factorialNumberResult);
     setResultForElementById("fizzBuzz", fizzBuzzResult);
     setResultForElementById("array", arrayResult);
+    setResultForElementById("bubbleSort", bubbleSortResult);
     console.log(primeNumberResult);
 };
 var readInputField = function () {
@@ -81,7 +83,6 @@ var hasElementInArray = function (array, element) {
 var array = function (inputValue) {
     var inputValueArray = inputValue.split("");
     var arrayWithoutDublicates = [inputValueArray[0]];
-
     for (var x = 0; x <= inputValueArray.length; x++) {
         var slicedArray = inputValueArray.slice(0, x + 1);
         if (!hasElementInArray(slicedArray, inputValueArray[x + 1])) {
@@ -91,4 +92,14 @@ var array = function (inputValue) {
     return arrayWithoutDublicates;
 };
 
-
+var bubbleSort = function (inputValue) {
+    var array = inputValue.split("");
+        for (var x = 0; x <= array.length - 1; x++) {
+            if (array[x] > array[x + 1]) {
+                var changed = array[x];
+                array[x] = array [x + 1];
+                array[x + 1] = changed;
+            }
+        }
+    return array
+};
