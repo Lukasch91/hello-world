@@ -21,6 +21,7 @@
 
         #ipfields {
             float: left;
+            width: 100%;
         }
 
         #footer {
@@ -38,27 +39,32 @@
 <input type="text" id="inputNumber" placeholder="Enter number" title="Enter number">
 <button onclick="buttonClickEvent()">GO!</button>
 <hr>
-<div id="names">
-    <p>Prime number:</p>
+<p id="ipfields">
 
-    <p>Factorial number:</p>
+<p>
 
-    <p>Fizz Buzz:</p>
+<div>Prime number: <input type="text" id="PrimeNumber" disabled title="Prime Number"></div>
+</p>
+<p>
 
-    <p>Array:</p>
+<div>Factorial number: <input type="text" id="FactorialNumber" disabled title="Factorial number"></div>
+</p>
+<p>
 
-    <p>Bubble sort:</p>
-</div>
-<div id="ipfields">
-    <p><input type="text" id="PrimeNumber" disabled title="Prime Number"></p>
+<div>Fizz Buzz: <input type="text" id="fizzBuzz" disabled title="FizzBuzz"></div>
+</p>
+<p>
 
-    <p><input type="text" id="FactorialNumber" disabled title="Factorial number"></p>
+<div>Array:<input type="text" id="array" disabled title="Array"></div>
+</p>
+<p>
 
-    <p><input type="text" id="fizzBuzz" disabled title="FizzBuzz"></p>
+<div>Bubble sort:<input type="text" id="bubbleSort" disabled title="BubbleSort"></div>
+</p>
+<p>
 
-    <p><input type="text" id="array" disabled title="Array"></p>
-
-    <p><input type="text" id="bubbleSort" disabled title="BubbleSort"></p>
+<div>Quick sort:<input type="text" id="quickSort" disabled title="QuickSort"></div>
+</p>
 </div>
 <div id="footer">
     <p>Copyright</p>

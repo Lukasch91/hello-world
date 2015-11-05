@@ -6,12 +6,14 @@ var buttonClickEvent = function () {
     var fizzBuzzResult = fizzBuzz(inputValue);
     var arrayResult = array(inputValue);
     var bubbleSortResult = bubbleSort(inputValue);
+    var quickSortResult = quickSort(inputValue);
 
     setResultForElementById("PrimeNumber", primeNumberResult);
     setResultForElementById("FactorialNumber", factorialNumberResult);
     setResultForElementById("fizzBuzz", fizzBuzzResult);
     setResultForElementById("array", arrayResult);
     setResultForElementById("bubbleSort", bubbleSortResult);
+    setResultForElementById("quickSort", quickSortResult);
     console.log(primeNumberResult);
 };
 var readInputField = function () {
@@ -82,24 +84,37 @@ var hasElementInArray = function (array, element) {
 
 var array = function (inputValue) {
     var inputValueArray = inputValue.split("");
-    var arrayWithoutDublicates = [inputValueArray[0]];
+    var arrayWithoutDuplicates = [inputValueArray[0]];
     for (var x = 0; x <= inputValueArray.length; x++) {
         var slicedArray = inputValueArray.slice(0, x + 1);
         if (!hasElementInArray(slicedArray, inputValueArray[x + 1])) {
-            arrayWithoutDublicates.push(inputValueArray[x + 1]);
+            arrayWithoutDuplicates.push(inputValueArray[x + 1]);
         }
     }
-    return arrayWithoutDublicates;
+    return arrayWithoutDuplicates;
 };
 
 var bubbleSort = function (inputValue) {
     var array = inputValue.split("");
+    var arrayChanged;
+    for (var i = 0; i < array.length - 1; i++) {
+        arrayChanged = false;
         for (var x = 0; x <= array.length - 1; x++) {
             if (array[x] > array[x + 1]) {
-                var changed = array[x];
+                arrayChanged = true;
+                var change = array[x];
                 array[x] = array [x + 1];
-                array[x + 1] = changed;
+                array[x + 1] = change;
             }
         }
+    }
+    return array
+};
+
+var quickSort = function (inputValue) {
+    var array = inputValue.split("");
+    array.sort(function (a, b) {
+        return a - b
+    });
     return array
 };
