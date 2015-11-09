@@ -1,5 +1,6 @@
-var buttonClickEvent = function () {
-    console.log("Ivyko funkcija");
+var buttonClickEvent = function (event) {
+    console.log("Ivyko funkcija"+event);
+
     var inputValue = readInputField();
     var primeNumberResult = isPrimeNumber(inputValue);
     var factorialNumberResult = calculateFactorial(inputValue);
@@ -14,7 +15,7 @@ var buttonClickEvent = function () {
     setResultForElementById("array", arrayResult);
     setResultForElementById("bubbleSort", bubbleSortResult);
     setResultForElementById("quickSort", quickSortResult);
-    console.log(primeNumberResult);
+
 };
 var readInputField = function () {
     var value = document.getElementById("inputNumber").value;
@@ -94,17 +95,37 @@ var array = function (inputValue) {
     return arrayWithoutDuplicates;
 };
 
+/*var bubbleSort = function (inputValue) {
+ var array = inputValue.split("");
+ var arrayChanged;
+ do {
+ arrayChanged = false;
+ for (var x = 0; x <= array.length - 1; x++) {
+ if (array[x] > array[x + 1]) {
+ var change = array[x];
+ array[x] = array [x + 1];
+ array[x + 1] = change;
+ arrayChanged = true;
+ }
+ }
+ }
+ while (arrayChanged);
+ return array
+ };*/
+
+
+
 var bubbleSort = function (inputValue) {
     var array = inputValue.split("");
-    var arrayChanged;
-    for (var i = 0; i < array.length - 1; i++) {
+    var arrayChanged = true;
+    while (arrayChanged) {
         arrayChanged = false;
-        for (var x = 0; x <= array.length - 1; x++) {
+        for (var x = 0; x < array.length - 1; x++) {
             if (array[x] > array[x + 1]) {
-                arrayChanged = true;
                 var change = array[x];
                 array[x] = array [x + 1];
                 array[x + 1] = change;
+                arrayChanged = true;
             }
         }
     }
