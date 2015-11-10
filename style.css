@@ -42,22 +42,12 @@ input:focus, textarea:focus {
     border-color: #ee646d;
 }
 
-#footer2 {
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    background-color: #2E88EE;
-    color: white;
-    clear: both;
-    text-align: center;
-    padding: 5px;
-}
 #footer {
-    position:fixed;
-    bottom:0px;
-    width:100%;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
     color: white;
-    background:#2E88EE;
+    background: #2E88EE;
     text-align: center;
     padding: 10px;
 }
