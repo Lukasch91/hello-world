@@ -1,0 +1,63 @@
+.inputField1 {
+    border: 3px solid white;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.13),
+    0 0 16px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background: rgba(135, 209, 238, 0.5);
+    width: 300px;
+}
+
+.inputFieldButton {
+    background-color: #2E88EE;
+    border: 1px solid #28477c;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    width: 80px;
+}
+
+.inputFieldButton:hover {
+    background-color: #28477c;
+}
+
+#header {
+    background-color: #2E88EE;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+#inputField1 {
+    text-align: center;
+    width: 100%;
+}
+
+#inputField2 {
+    text-align: right;
+    width: 59%;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    border-color: #ee646d;
+}
+
+#footer2 {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    background-color: #2E88EE;
+    color: white;
+    clear: both;
+    text-align: center;
+    padding: 5px;
+}
+#footer {
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    color: white;
+    background:#2E88EE;
+    text-align: center;
+    padding: 10px;
+}

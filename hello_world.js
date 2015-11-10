@@ -1,5 +1,5 @@
 var buttonClickEvent = function (event) {
-    console.log("Ivyko funkcija"+event);
+    console.log("Ivyko funkcija" + event);
 
     var inputValue = readInputField();
     var primeNumberResult = isPrimeNumber(inputValue);
@@ -26,6 +26,7 @@ var readInputField = function () {
 var setResultForElementById = function (id, result) {
     document.getElementById(id).value = result;
 };
+
 
 var calculateFactorial = function (inputValue) {
     var result = inputValue;
@@ -62,17 +63,6 @@ var fizzBuzz = function (inputValue) {
     }
 };
 
-/*var hasElementInArray = function (inputValueArray, x) {
- var a = inputValueArray[x];
- for (var y = 0; y < x; y++) {
- var b = inputValueArray[y];
- if (a == b) {
- return true;
- }
- }
- return false;
- };*/
-
 var hasElementInArray = function (array, element) {
     for (var x = 0; x <= array.length; x++) {
         if (element == array[x]) {
@@ -94,26 +84,6 @@ var array = function (inputValue) {
     }
     return arrayWithoutDuplicates;
 };
-
-/*var bubbleSort = function (inputValue) {
- var array = inputValue.split("");
- var arrayChanged;
- do {
- arrayChanged = false;
- for (var x = 0; x <= array.length - 1; x++) {
- if (array[x] > array[x + 1]) {
- var change = array[x];
- array[x] = array [x + 1];
- array[x + 1] = change;
- arrayChanged = true;
- }
- }
- }
- while (arrayChanged);
- return array
- };*/
-
-
 
 var bubbleSort = function (inputValue) {
     var array = inputValue.split("");
