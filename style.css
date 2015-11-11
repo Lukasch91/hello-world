@@ -7,6 +7,15 @@
     width: 300px;
 }
 
+.inputField2 {
+    border: 3px solid white;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.13),
+    0 0 16px rgba(0, 0, 0, 0.1);
+    padding: 3px;
+    background: rgba(135, 209, 238, 0.5);
+    width: 200px;
+}
+
 .inputFieldButton {
     background-color: #2E88EE;
     border: 1px solid #28477c;
@@ -18,6 +27,17 @@
 
 .inputFieldButton:hover {
     background-color: #28477c;
+}
+
+.names {
+    width: 120px;
+    float: left;
+    padding: 3px
+}
+
+.resultFields {
+    float: left;
+    width: 93%
 }
 
 #header {
