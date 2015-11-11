@@ -2,19 +2,26 @@ var buttonClickEvent = function (event) {
     console.log("Ivyko funkcija" + event);
 
     var inputValue = readInputField();
-    var primeNumberResult = isPrimeNumber(inputValue);
-    var factorialNumberResult = calculateFactorial(inputValue);
-    var fizzBuzzResult = fizzBuzz(inputValue);
-    var arrayResult = array(inputValue);
-    var bubbleSortResult = bubbleSort(inputValue);
-    var quickSortResult = quickSort(inputValue);
+    var onlyNumericResult = onlyNumeric(inputValue);
+    if (onlyNumericResult) {
+        var primeNumberResult = isPrimeNumber(inputValue);
+        var factorialNumberResult = calculateFactorial(inputValue);
+        var fizzBuzzResult = fizzBuzz(inputValue);
+        var arrayResult = array(inputValue);
+        var bubbleSortResult = bubbleSort(inputValue);
+        var quickSortResult = quickSort(inputValue);
+        setResultForElementById("PrimeNumber", primeNumberResult);
+        setResultForElementById("FactorialNumber", factorialNumberResult);
+        setResultForElementById("fizzBuzz", fizzBuzzResult);
+        setResultForElementById("array", arrayResult);
+        setResultForElementById("bubbleSort", bubbleSortResult);
+        setResultForElementById("quickSort", quickSortResult);
 
-    setResultForElementById("PrimeNumber", primeNumberResult);
-    setResultForElementById("FactorialNumber", factorialNumberResult);
-    setResultForElementById("fizzBuzz", fizzBuzzResult);
-    setResultForElementById("array", arrayResult);
-    setResultForElementById("bubbleSort", bubbleSortResult);
-    setResultForElementById("quickSort", quickSortResult);
+    }
+    else {
+        document.getElementById("errorText").innerHTML = "*numbers only!";
+    }
+
 
 };
 var readInputField = function () {
@@ -109,3 +116,14 @@ var quickSort = function (inputValue) {
     });
     return array
 };
+
+var onlyNumeric = function (inputValue) {
+    var numbers = /^[0-9]+$/;
+    if (inputValue.match(numbers)) {
+        return true
+    }
+    else {
+        return false
+    }
+};
+
