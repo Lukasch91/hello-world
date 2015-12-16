@@ -16,12 +16,13 @@ var buttonClickEvent = function (event) {
         setResultForElementById("array", arrayResult);
         setResultForElementById("bubbleSort", bubbleSortResult);
         setResultForElementById("quickSort", quickSortResult);
-
+        document.getElementById("errorText").innerHTML = "";
+        document.getElementById('inputNumber').style.borderColor="";
     }
     else {
         document.getElementById("errorText").innerHTML = "*numbers only!";
+        document.getElementById('inputNumber').style.borderColor="#FF0000";
     }
-
 
 };
 var readInputField = function () {
