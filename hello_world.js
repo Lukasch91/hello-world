@@ -35,6 +35,21 @@ var setResultForElementById = function (id, result) {
     document.getElementById(id).value = result;
 };
 
+var data = {
+    title: 'StarWars',
+    description: "Nice movie",
+    comments: [
+        {
+            userid: 1,
+            comment: 'Cool movie'
+        },
+        {
+            userid: 2,
+            comment: "Shit movie"
+        }
+    ]
+}
+
 
 var calculateFactorial = function (inputValue) {
     var result = inputValue;
